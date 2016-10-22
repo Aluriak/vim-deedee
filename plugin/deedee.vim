@@ -10,7 +10,7 @@ let g:DeedeeAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 function! Deedee()
     let a:plugin_path = escape(expand('<sfile>:p:h'), '\')
-    exe 'py3file ' . escape(a:plugin_path, ' ') . '/deedee.py'
+    exe 'py3file ' . escape(a:plugin_path, ' ') . '/plugin/deedee.py'
     "py3file deedee.py
 endfunc
 
