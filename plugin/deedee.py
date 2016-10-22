@@ -50,6 +50,6 @@ for _ in range(TRY_LIMIT):
         # insert the tag in the line after the cursor
         line = buffer[row-1]
         buffer[row-1] = line[:col] + tag + line[col:]
-        exit()
+        break
 else:  # no unique tag found
     print('All tags have been dispatched. No tag added.')
