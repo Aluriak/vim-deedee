@@ -1,0 +1,52 @@
+# Dee-Dee
+Place random tags in your code using this vim plugin.
+
+That is my first vim plugin, so there is probably a LOT of bad practices used here.
+I heavily used [python-vim doc](http://vimdoc.sourceforge.net/htmldoc/if_pyth.html#python-vim), and was inspired by these pages:
+[learn vim script the hard way](http://learnvimscriptthehardway.stevelosh.com/chapters/43.html),
+[scripting vim with python](http://orestis.gr/blog/2008/08/10/scripting-vim-with-python/), and
+[vim plugins in python](http://www.terminally-incoherent.com/blog/2013/05/06/vriting-vim-plugins-in-python/).
+
+
+## installation
+Copy paste `deedee.{vim,py}` in your `.vim/plugin/` dir, or use `{plug,pathogen,…}`:
+
+    Plug 'aluriak/vim-deedee'
+
+
+## example
+Follows a random source code, with the cursor marked as '§':
+
+    def func():
+       print('§')
+
+Then, after the ':deedee' command:
+
+
+    def func():
+       print('ASQPQE§')
+
+
+## options (and their default values)
+
+    let g:DeedeeSize = 6
+
+Size of the tag to generate.
+
+    let g:DeedeeMode = 'a' # (all) or 'b' (current buffer) or 'n' (none)
+
+`a` is for *All*: the tag will not match with any line in all opened buffers
+`b` is for *Buffer*: the tag will not match with any line in current buffer
+`n` is for *None*: No verification of doublons
+
+    let g:DeedeeAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+Letters that can be used for tags. You can add any character.
+
+
+## Rationale
+When logging in the code, instead of describe from where the logging occurs, just provides a random tag.
+You could then find the relevant logging with something like `grep -rnI --color . -e "tag"` or [alias](https://github.com/Aluriak/dotfiles/blob/master/functions.sh#L73).
+
+
+Name comes from `random id` -> `rand id` -> `did` -> `didi` -> `deedee`
