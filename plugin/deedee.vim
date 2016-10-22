@@ -3,7 +3,7 @@ if !has('python')
 endif
 
 " Global Variables {{{
-let g:DeedeeSize = 4
+let g:DeedeeSize = 6
 let g:DeedeeMode = 'a'
 let g:DeedeeAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 " }}}
