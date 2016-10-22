@@ -9,7 +9,9 @@ let g:DeedeeAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 " }}}
 
 function! Deedee()
-    py3file vim-deedee/plugin/deedee.py
+    let a:plugin_path = escape(expand('<sfile>:p:h'), '\')
+    exe 'py3file ' . escape(a:plugin_path, ' ') . '/deedee.py'
+    "py3file deedee.py
 endfunc
 
 command! Deedee call Deedee()
