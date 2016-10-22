@@ -9,7 +9,7 @@ let g:DeedeeAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 " }}}
 
 function! Deedee()
-    py3file .vim/plugin/deedee.py
+    py3file vim-deedee/plugin/deedee.py
 endfunc
 
 command! Deedee call Deedee()
